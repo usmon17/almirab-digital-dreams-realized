@@ -6,7 +6,7 @@ const word = {
   show: (i: number) => ({
     y: 0,
     opacity: 1,
-    transition: { delay: 0.1 + i * 0.08, duration: 0.9, ease: [0.22, 1, 0.36, 1] },
+    transition: { delay: 0.1 + i * 0.08, duration: 0.9, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
   }),
 };
 
