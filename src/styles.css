@@ -160,6 +160,10 @@
     -webkit-backdrop-filter: blur(20px) saturate(160%);
     border: 1px solid oklch(1 0 0 / 8%);
   }
+  .light .glass {
+    background: oklch(1 0 0 / 70%);
+    border: 1px solid oklch(0.2 0.02 280 / 8%);
+  }
 
   .glow-pink { box-shadow: var(--shadow-glow-pink); }
   .glow-blue { box-shadow: var(--shadow-glow-blue); }
@@ -171,6 +175,11 @@
       linear-gradient(90deg, oklch(1 0 0 / 4%) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+  .light .grid-bg {
+    background-image:
+      linear-gradient(oklch(0.2 0.02 280 / 5%) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.2 0.02 280 / 5%) 1px, transparent 1px);
   }
 
   .noise::before {
