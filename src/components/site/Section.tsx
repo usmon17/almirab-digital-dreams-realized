@@ -22,7 +22,7 @@ export function SectionHeader({
         <span className="h-px w-8 bg-[var(--neon-pink)]" />
         {eyebrow}
       </div>
-      <h2 className="font-display text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
+      <h2 className="font-display text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-foreground">
         {title}
       </h2>
       {description && (

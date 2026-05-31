@@ -12,6 +12,8 @@ import { Testimonials } from "@/components/site/Testimonials";
 import { Stats } from "@/components/site/Stats";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { ThemeProvider } from "@/components/site/ThemeProvider";
+import { I18nProvider } from "@/components/site/i18n";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,20 +36,24 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="relative">
-      <Nav />
-      <Hero />
-      <Marquee />
-      <About />
-      <Services />
-      <Process />
-      <Work />
-      <Stack />
-      <WhyUs />
-      <Stats />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </main>
+    <ThemeProvider>
+      <I18nProvider>
+        <main className="relative">
+          <Nav />
+          <Hero />
+          <Marquee />
+          <About />
+          <Services />
+          <Process />
+          <Work />
+          <Stack />
+          <WhyUs />
+          <Stats />
+          <Testimonials />
+          <Contact />
+          <Footer />
+        </main>
+      </I18nProvider>
+    </ThemeProvider>
   );
 }

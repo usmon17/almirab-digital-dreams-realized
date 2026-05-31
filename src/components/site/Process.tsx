@@ -1,28 +1,30 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "./Section";
-
-const steps = [
-  { t: "Discovery", d: "Deep conversations to align on the problem, audience and ambition." },
-  { t: "Research", d: "Market, users, technical landscape. Evidence before opinions." },
-  { t: "Design", d: "Systems, flows, prototypes — pixel-level care from day one." },
-  { t: "Development", d: "Modern stack, type-safe end to end, code reviewed daily." },
-  { t: "Testing", d: "Automated, manual, and real-world. Nothing ships untested." },
-  { t: "Launch", d: "Smooth go-live with monitoring, performance and SEO in place." },
-  { t: "Growth", d: "Iteration, experimentation and long-term support after launch." },
-];
+import { useI18n } from "./i18n";
 
 export function Process() {
+  const { t } = useI18n();
+  const steps = [
+    { t: t("p.1.t"), d: t("p.1.d") },
+    { t: t("p.2.t"), d: t("p.2.d") },
+    { t: t("p.3.t"), d: t("p.3.d") },
+    { t: t("p.4.t"), d: t("p.4.d") },
+    { t: t("p.5.t"), d: t("p.5.d") },
+    { t: t("p.6.t"), d: t("p.6.d") },
+    { t: t("p.7.t"), d: t("p.7.d") },
+  ];
+
   return (
     <section id="process" className="relative py-32 px-6">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
-          eyebrow="Process"
-          title={<>How we work — <span className="text-aurora italic">in seven moves</span>.</>}
-          description="A clear path from first call to long-term partnership."
+          eyebrow={t("process.eyebrow")}
+          title={<>{t("process.title")}</>}
+          description={t("process.desc")}
         />
 
         <div className="relative">
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-border to-transparent md:-translate-x-1/2" aria-hidden />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" aria-hidden />
           <ol className="space-y-10">
             {steps.map((s, i) => (
               <motion.li
@@ -39,7 +41,7 @@ export function Process() {
                   <p className="mt-2 text-muted-foreground max-w-md md:inline-block">{s.d}</p>
                 </div>
                 <div className="hidden md:block" />
-                <span className="absolute left-4 md:left-1/2 top-2 -translate-x-1/2 h-4 w-4 rounded-full bg-aurora glow-pink" />
+                <span className="absolute left-4 md:left-1/2 top-2 -translate-x-1/2 h-3 w-3 rounded-full bg-foreground ring-4 ring-background" />
               </motion.li>
             ))}
           </ol>
