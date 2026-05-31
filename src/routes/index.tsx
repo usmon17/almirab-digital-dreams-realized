@@ -12,6 +12,8 @@ import { Testimonials } from "@/components/site/Testimonials";
 import { Stats } from "@/components/site/Stats";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { ThemeProvider } from "@/components/site/ThemeProvider";
+import { I18nProvider } from "@/components/site/i18n";
 
 export const Route = createFileRoute("/")({
   head: () => ({

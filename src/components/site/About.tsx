@@ -1,29 +1,22 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "./Section";
-
-const pillars = [
-  {
-    k: "Mission",
-    v: "Build software so refined it feels inevitable — clear, fast, and deeply considered.",
-  },
-  {
-    k: "Vision",
-    v: "A world where every digital product respects the person on the other side of the screen.",
-  },
-  {
-    k: "Values",
-    v: "Craft over speed. Substance over noise. Trust earned through every interaction.",
-  },
-];
+import { useI18n } from "./i18n";
 
 export function About() {
+  const { t } = useI18n();
+  const pillars = [
+    { k: t("about.mission.k"), v: t("about.mission.v") },
+    { k: t("about.vision.k"), v: t("about.vision.v") },
+    { k: t("about.values.k"), v: t("about.values.v") },
+  ];
+
   return (
     <section id="about" className="relative py-32 px-6">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
-          eyebrow="About"
-          title={<>A studio for teams who care <span className="text-aurora italic">how</span> things are made.</>}
-          description="ALMIRAB is a small, senior team of engineers and designers. We partner with founders and product teams to ship work that earns attention."
+          eyebrow={t("about.eyebrow")}
+          title={<>{t("about.title")}</>}
+          description={t("about.desc")}
         />
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -34,13 +27,10 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative rounded-3xl glass p-8 overflow-hidden"
+              className="group relative rounded-3xl border border-border bg-card/40 p-8 hover:border-[var(--neon-pink)]/40 transition-colors"
             >
-              <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-aurora opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-30" />
-              <div className="relative">
-                <div className="font-display text-sm uppercase tracking-[0.25em] text-[var(--neon-pink)]">{p.k}</div>
-                <p className="mt-4 text-xl leading-snug">{p.v}</p>
-              </div>
+              <div className="font-display text-sm uppercase tracking-[0.25em] text-[var(--neon-pink)]">{p.k}</div>
+              <p className="mt-4 text-xl leading-snug">{p.v}</p>
             </motion.div>
           ))}
         </div>

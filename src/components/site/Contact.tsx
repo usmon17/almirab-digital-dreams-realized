@@ -1,19 +1,18 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "./Section";
 import { useState } from "react";
+import { useI18n } from "./i18n";
 
 export function Contact() {
+  const { t } = useI18n();
   const [sent, setSent] = useState(false);
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-1/3 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-aurora opacity-20 blur-[120px]" />
-      </div>
       <div className="relative mx-auto max-w-5xl">
         <SectionHeader
-          eyebrow="Contact"
-          title={<>Let's build something <span className="text-aurora italic">remarkable</span>.</>}
-          description="Tell us about your project. We respond within one business day."
+          eyebrow={t("contact.eyebrow")}
+          title={<>{t("contact.title")}</>}
+          description={t("contact.desc")}
         />
 
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr]">
@@ -23,24 +22,24 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-            className="glass rounded-3xl p-8 space-y-5"
+            className="rounded-3xl border border-border bg-card/40 p-8 space-y-5"
           >
-            <Field label="Your name" name="name" />
-            <Field label="Email" name="email" type="email" />
-            <Field label="Company" name="company" />
+            <Field label={t("contact.name")} name="name" />
+            <Field label={t("contact.email")} name="email" type="email" />
+            <Field label={t("contact.company")} name="company" />
             <div>
-              <label className="block text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">Project details</label>
+              <label className="block text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">{t("contact.details")}</label>
               <textarea
                 rows={4}
                 required
-                className="w-full rounded-2xl bg-input/60 border border-border px-4 py-3 text-foreground outline-none focus:border-[var(--neon-pink)] transition-colors resize-none"
+                className="w-full rounded-2xl bg-input/60 border border-border px-4 py-3 text-foreground outline-none focus:border-foreground transition-colors resize-none"
               />
             </div>
             <button
               type="submit"
-              className="inline-flex items-center gap-2 rounded-full bg-aurora px-6 py-3.5 text-sm font-medium text-background glow-pink hover:scale-[1.02] transition-transform"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3.5 text-sm font-medium hover:scale-[1.02] transition-transform"
             >
-              {sent ? "Thank you — we'll be in touch ✨" : "Send message"}
+              {sent ? t("contact.sent") : t("contact.send")}
               {!sent && <span>→</span>}
             </button>
           </motion.form>
@@ -52,14 +51,14 @@ export function Contact() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="space-y-6"
           >
-            <InfoRow k="Email" v="hello@almirab.studio" />
-            <InfoRow k="Phone" v="+998 90 000 00 00" />
-            <InfoRow k="Studio" v="Tashkent · Remote worldwide" />
-            <div className="pt-4 border-t border-border/60">
-              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">Social</div>
+            <InfoRow k={t("contact.email")} v="hello@almirab.studio" />
+            <InfoRow k={t("contact.phone.k")} v="+998 90 000 00 00" />
+            <InfoRow k={t("contact.studio.k")} v={t("contact.studio.v")} />
+            <div className="pt-4 border-t border-border">
+              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">{t("contact.social")}</div>
               <div className="flex gap-3">
                 {["X", "in", "GH", "Dr"].map((s) => (
-                  <a key={s} href="#" className="h-10 w-10 rounded-full glass flex items-center justify-center text-sm hover:text-[var(--neon-pink)] hover:border-[var(--neon-pink)] transition-colors">
+                  <a key={s} href="#" className="h-10 w-10 rounded-full border border-border bg-card/40 flex items-center justify-center text-sm hover:border-foreground hover:text-foreground transition-colors">
                     {s}
                   </a>
                 ))}
@@ -81,7 +80,7 @@ function Field({ label, name, type = "text" }: { label: string; name: string; ty
         name={name}
         type={type}
         required
-        className="w-full rounded-2xl bg-input/60 border border-border px-4 py-3 text-foreground outline-none focus:border-[var(--neon-pink)] transition-colors"
+        className="w-full rounded-2xl bg-input/60 border border-border px-4 py-3 text-foreground outline-none focus:border-foreground transition-colors"
       />
     </div>
   );
