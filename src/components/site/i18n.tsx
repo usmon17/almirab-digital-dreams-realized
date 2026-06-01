@@ -15,9 +15,9 @@ export const dict: Dict = {
   "hero.badge": { uz: "Q3 uchun joylar cheklangan", ru: "Принимаем заявки на Q3", en: "Now booking Q3 — limited slots" },
   "hero.title": { uz: "Biz odamlar sevadigan raqamli mahsulotlar yaratamiz.", ru: "Мы создаём цифровые продукты, которые любят.", en: "We build digital products people love." },
   "hero.subtitle": {
-    uz: "ALMIRAB — veb, mobil, desktop va AI yechimlarini ishlab chiqaruvchi studiya. G'oyalarni jonli, sayqallangan mahsulotlarga aylantiramiz.",
-    ru: "ALMIRAB — студия, создающая веб, мобильные, десктопные и AI-решения. Превращаем идеи в продуманные цифровые продукты.",
-    en: "ALMIRAB is a studio crafting web, mobile, desktop and AI-powered software. We turn ambitious ideas into refined experiences.",
+    uz: "almirab — veb, mobil, desktop va AI yechimlarini ishlab chiqaruvchi studiya. G'oyalarni jonli, sayqallangan mahsulotlarga aylantiramiz.",
+    ru: "almirab — студия, создающая веб, мобильные, десктопные и AI-решения. Превращаем идеи в продуманные цифровые продукты.",
+    en: "almirab is a studio crafting web, mobile, desktop and AI-powered software. We turn ambitious ideas into refined experiences.",
   },
   "hero.cta1": { uz: "Loyihani boshlash", ru: "Начать проект", en: "Start your project" },
   "hero.cta2": { uz: "Ishlarimizni ko'rish", ru: "Смотреть работы", en: "Explore our work" },
@@ -25,7 +25,7 @@ export const dict: Dict = {
 
   "about.eyebrow": { uz: "Biz haqimizda", ru: "О нас", en: "About" },
   "about.title": { uz: "Qanday yaratilganini muhim deb biluvchilar uchun studiya.", ru: "Студия для тех, кому важно, как сделано.", en: "A studio for teams who care how things are made." },
-  "about.desc": { uz: "ALMIRAB — muhandislar va dizaynerlardan iborat kichik, tajribali jamoa. Asoschilar va mahsulot jamoalari bilan birga ishlab, e'tiborga loyiq ishlar yaratamiz.", ru: "ALMIRAB — небольшая команда сеньоров: инженеров и дизайнеров. Работаем с фаундерами и продуктовыми командами над работой, которая заслуживает внимания.", en: "ALMIRAB is a small, senior team of engineers and designers. We partner with founders and product teams to ship work that earns attention." },
+  "about.desc": { uz: "almirab — muhandislar va dizaynerlardan iborat kichik, tajribali jamoa. Asoschilar va mahsulot jamoalari bilan birga ishlab, e'tiborga loyiq ishlar yaratamiz.", ru: "almirab — небольшая команда сеньоров: инженеров и дизайнеров. Работаем с фаундерами и продуктовыми командами над работой, которая заслуживает внимания.", en: "almirab is a small, senior team of engineers and designers. We partner with founders and product teams to ship work that earns attention." },
   "about.mission.k": { uz: "Missiya", ru: "Миссия", en: "Mission" },
   "about.mission.v": { uz: "Shu darajada sayqallangan dasturiy mahsulot yaratish — aniq, tez va chuqur o'ylangan.", ru: "Создавать настолько отточенное ПО, что оно кажется неизбежным — ясное, быстрое, продуманное.", en: "Build software so refined it feels inevitable — clear, fast, and deeply considered." },
   "about.vision.k": { uz: "Vizyon", ru: "Видение", en: "Vision" },
@@ -87,7 +87,7 @@ export const dict: Dict = {
   "stack.data": { uz: "Ma'lumotlar", ru: "Данные", en: "Data" },
   "stack.cloud": { uz: "Cloud", ru: "Cloud", en: "Cloud" },
 
-  "why.eyebrow": { uz: "Nega ALMIRAB", ru: "Почему ALMIRAB", en: "Why ALMIRAB" },
+  "why.eyebrow": { uz: "Nega almirab", ru: "Почему almirab", en: "Why almirab" },
   "why.title": { uz: "Jamoalar biz bilan qoladigan oltita sabab.", ru: "Шесть причин, почему команды остаются с нами.", en: "Six reasons teams stay with us." },
   "why.1.t": { uz: "Premium sifat", ru: "Премиум-качество", en: "Premium Quality" },
   "why.1.d": { uz: "Tajribali jamoa, baland mezon, har bir detal o'ylangan.", ru: "Сеньорная команда, высокая планка, каждая деталь продумана.", en: "Senior team, high bar, every detail intentional." },
@@ -109,7 +109,7 @@ export const dict: Dict = {
 
   "tst.eyebrow": { uz: "Mijozlar fikri", ru: "Отзывы", en: "Testimonials" },
   "tst.title": { uz: "Birga yaratgan odamlarimiz so'zlari.", ru: "Слова людей, с которыми мы строили.", en: "Words from the people we built with." },
-  "tst.1.q": { uz: "ALMIRAB olti hafta ichida shunday narsani yetkazib berdi — oldingi vendor olti oyda qila olmagan. Mezon real.", ru: "ALMIRAB за шесть недель сделал то, что прежний подрядчик не смог за шесть месяцев. Планка реальная.", en: "ALMIRAB shipped in six weeks what our previous vendor couldn't in six months. The bar is real." },
+  "tst.1.q": { uz: "almirab olti hafta ichida shunday narsani yetkazib berdi — oldingi vendor olti oyda qila olmagan. Mezon real.", ru: "almirab за шесть недель сделал то, что прежний подрядчик не смог за шесть месяцев. Планка реальная.", en: "almirab shipped in six weeks what our previous vendor couldn't in six months. The bar is real." },
   "tst.2.q": { uz: "Biz ishlagan eng o'ylangan muhandislik jamoasi — jimgina. Har bir qarorning sababi bor edi.", ru: "Тихо — самая продуманная инженерная команда из тех, с кем мы работали. У каждого решения была причина.", en: "Quietly the most considered engineering team we've ever worked with. Every decision had a reason." },
   "tst.3.q": { uz: "Ba'zan ular bizdan ko'ra foydalanuvchilarimizga ko'proq g'amxo'rlik qilgan. Mahsulot shu sababli yaxshiroq.", ru: "Порой они заботились о наших пользователях больше нас самих. Продукт от этого реально выиграл.", en: "They cared about our users more than we did at times. The product is genuinely better for it." },
 
