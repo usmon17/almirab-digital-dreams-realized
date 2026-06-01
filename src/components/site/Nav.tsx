@@ -26,7 +26,7 @@ export function Nav() {
           <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-foreground">
             <span className="font-display font-bold text-[10px] text-background">A</span>
           </span>
-          <span className="font-display font-semibold tracking-tight">ALMIRAB</span>
+          <span className="font-display font-semibold tracking-tight">almirab</span>
         </a>
 
         <ul className="hidden lg:flex items-center gap-1 px-2">

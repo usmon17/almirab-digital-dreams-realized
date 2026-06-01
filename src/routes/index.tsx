@@ -18,9 +18,9 @@ import { I18nProvider } from "@/components/site/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ALMIRAB — We build digital products people love" },
-      { name: "description", content: "ALMIRAB is a studio crafting web, mobile, desktop and AI-powered software for ambitious teams." },
-      { property: "og:title", content: "ALMIRAB — We build digital products people love" },
+      { title: "almirab — We build digital products people love" },
+      { name: "description", content: "almirab is a studio crafting web, mobile, desktop and AI-powered software for ambitious teams." },
+      { property: "og:title", content: "almirab — We build digital products people love" },
       { property: "og:description", content: "Studio for web, mobile, desktop, SaaS and AI software." },
       { property: "og:type", content: "website" },
     ],
